@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Jv-5S-UyX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O5O-nX-qPP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yOL-Zk-WjD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="242" y="-9"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="7xu-D4-QqZ">
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkl-Cp-kT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="134"/>
+            <point key="canvasLocation" x="1316" y="133"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="dVv-K7-XCA">
@@ -172,7 +172,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBx-EV-IkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="134"/>
+            <point key="canvasLocation" x="2146" y="134"/>
+        </scene>
+        <!--Don MagV2 View Controller-->
+        <scene sceneID="llw-Ez-FT6">
+            <objects>
+                <viewController id="O5O-nX-qPP" customClass="DonMagV2ViewController" customModule="ChildViewControllerInScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9dm-wv-ZXb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4e5-bK-n3K">
+                                <rect key="frame" x="16" y="20" width="343" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didSwitchSegment:" destination="O5O-nX-qPP" eventType="valueChanged" id="uKo-3G-0zC"/>
+                                </connections>
+                            </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5I-Xy-ffd">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8WS-5m-UUI" firstAttribute="bottom" secondItem="M5I-Xy-ffd" secondAttribute="bottom" id="AUZ-4a-Hoa"/>
+                            <constraint firstItem="4e5-bK-n3K" firstAttribute="top" secondItem="8WS-5m-UUI" secondAttribute="top" id="BOj-x1-pyf"/>
+                            <constraint firstItem="M5I-Xy-ffd" firstAttribute="top" secondItem="4e5-bK-n3K" secondAttribute="bottom" constant="8" id="Ylg-UT-ftL"/>
+                            <constraint firstItem="8WS-5m-UUI" firstAttribute="trailing" secondItem="M5I-Xy-ffd" secondAttribute="trailing" id="Zh0-8C-75f"/>
+                            <constraint firstItem="4e5-bK-n3K" firstAttribute="leading" secondItem="8WS-5m-UUI" secondAttribute="leading" constant="16" id="cZX-w3-geq"/>
+                            <constraint firstItem="M5I-Xy-ffd" firstAttribute="leading" secondItem="8WS-5m-UUI" secondAttribute="leading" id="tTp-fa-744"/>
+                            <constraint firstItem="8WS-5m-UUI" firstAttribute="trailing" secondItem="4e5-bK-n3K" secondAttribute="trailing" constant="16" id="ySU-La-3PG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8WS-5m-UUI"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="M5I-Xy-ffd" id="Tj7-ea-3sU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvc-dB-qqf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="669"/>
         </scene>
     </scenes>
 </document>

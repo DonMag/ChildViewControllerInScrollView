@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7C3E33FB203EF9A40005883A /* DonMagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E33FA203EF9A40005883A /* DonMagViewController.swift */; };
 		7C3E33FC203EF9C70005883A /* DonMag.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3E33F9203EF9A40005883A /* DonMag.storyboard */; };
+		7C3E33FE203F0F980005883A /* ChildVCs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E33FD203F0F980005883A /* ChildVCs.swift */; };
+		7C3E3400203F0FC70005883A /* DonMagV2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E33FF203F0FC70005883A /* DonMagV2ViewController.swift */; };
+		7C3E3402203F127F0005883A /* SBOnly.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C3E3401203F127F0005883A /* SBOnly.storyboard */; };
+		7C3E3404203F18FD0005883A /* SBOnlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E3403203F18FD0005883A /* SBOnlyViewController.swift */; };
 		DCF5C77D203DCE9500F51D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5C77C203DCE9500F51D22 /* AppDelegate.swift */; };
 		DCF5C77F203DCE9500F51D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF5C77E203DCE9500F51D22 /* ViewController.swift */; };
 		DCF5C782203DCE9500F51D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCF5C780203DCE9500F51D22 /* Main.storyboard */; };
@@ -21,6 +25,10 @@
 /* Begin PBXFileReference section */
 		7C3E33F9203EF9A40005883A /* DonMag.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DonMag.storyboard; sourceTree = "<group>"; };
 		7C3E33FA203EF9A40005883A /* DonMagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonMagViewController.swift; sourceTree = "<group>"; };
+		7C3E33FD203F0F980005883A /* ChildVCs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVCs.swift; sourceTree = "<group>"; };
+		7C3E33FF203F0FC70005883A /* DonMagV2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonMagV2ViewController.swift; sourceTree = "<group>"; };
+		7C3E3401203F127F0005883A /* SBOnly.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBOnly.storyboard; sourceTree = "<group>"; };
+		7C3E3403203F18FD0005883A /* SBOnlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBOnlyViewController.swift; sourceTree = "<group>"; };
 		DCF5C779203DCE9500F51D22 /* ChildViewControllerInScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChildViewControllerInScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF5C77C203DCE9500F51D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF5C77E203DCE9500F51D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,10 @@
 				DCF5C790203DD3FE00F51D22 /* SecondViewController.swift */,
 				7C3E33F9203EF9A40005883A /* DonMag.storyboard */,
 				7C3E33FA203EF9A40005883A /* DonMagViewController.swift */,
+				7C3E33FD203F0F980005883A /* ChildVCs.swift */,
+				7C3E33FF203F0FC70005883A /* DonMagV2ViewController.swift */,
+				7C3E3401203F127F0005883A /* SBOnly.storyboard */,
+				7C3E3403203F18FD0005883A /* SBOnlyViewController.swift */,
 			);
 			path = ChildViewControllerInScrollView;
 			sourceTree = "<group>";
@@ -136,6 +148,7 @@
 			files = (
 				DCF5C787203DCE9500F51D22 /* LaunchScreen.storyboard in Resources */,
 				DCF5C784203DCE9500F51D22 /* Assets.xcassets in Resources */,
+				7C3E3402203F127F0005883A /* SBOnly.storyboard in Resources */,
 				7C3E33FC203EF9C70005883A /* DonMag.storyboard in Resources */,
 				DCF5C782203DCE9500F51D22 /* Main.storyboard in Resources */,
 			);
@@ -148,9 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3E3400203F0FC70005883A /* DonMagV2ViewController.swift in Sources */,
 				DCF5C791203DD3FE00F51D22 /* SecondViewController.swift in Sources */,
 				DCF5C78F203DD3F000F51D22 /* FirstViewController.swift in Sources */,
+				7C3E3404203F18FD0005883A /* SBOnlyViewController.swift in Sources */,
 				DCF5C77F203DCE9500F51D22 /* ViewController.swift in Sources */,
+				7C3E33FE203F0F980005883A /* ChildVCs.swift in Sources */,
 				DCF5C77D203DCE9500F51D22 /* AppDelegate.swift in Sources */,
 				7C3E33FB203EF9A40005883A /* DonMagViewController.swift in Sources */,
 			);

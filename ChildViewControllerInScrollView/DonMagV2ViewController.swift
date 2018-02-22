@@ -1,13 +1,13 @@
 //
-//  DonMagViewController.swift
+//  DonMagV2ViewController.swift
 //  ChildViewControllerInScrollView
 //
-//  Created by Don Mag on 2/21/18.
+//  Created by Don Mag on 2/22/18.
 //
 
 import UIKit
 
-class DonMagViewController: UIViewController {
+class DonMagV2ViewController: UIViewController {
 
 	@IBOutlet var scrollView: UIScrollView!
 	
@@ -17,35 +17,34 @@ class DonMagViewController: UIViewController {
 	var currentSubViewController: UIViewController?
 	
 	override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
+		
+		self.addChildViewController(firstVC)
+		self.addChildViewController(secondVC)
+		firstVC.didMove(toParentViewController: self)
+		secondVC.didMove(toParentViewController: self)
 		
 	}
-
+	
 	@IBAction func didSwitchSegment(_ sender: UISegmentedControl) {
 		print(#function, sender.selectedSegmentIndex)
 		switch sender.selectedSegmentIndex {
 		case 0:
 			presentSubViewController(firstVC)
-
+			
 		case 1:
 			presentSubViewController(secondVC)
-
+			
 		default: fatalError()
 		}
 		
 	}
 	
 	func presentSubViewController(_ new: UIViewController) {
-
-		if let old = currentSubViewController {
-			old.willMove(toParentViewController: nil)
-			old.view.removeFromSuperview()
-			old.removeFromParentViewController()
-		}
 		
-		self.addChildViewController(new)
-
-		new.didMove(toParentViewController: self)
+		if let old = currentSubViewController {
+			old.view.removeFromSuperview()
+		}
 		
 		// need to set the width, otherwise
 		// we get horizontal scrolling on smaller devices
@@ -65,10 +64,11 @@ class DonMagViewController: UIViewController {
 		new.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 0.0).isActive = true
 		new.view.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0.0).isActive = true
 		new.view.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0.0).isActive = true
-
+		
 		currentSubViewController = new
 	}
 	
 }
+
 
 
