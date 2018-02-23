@@ -23,8 +23,19 @@ class DMFirstViewController: UIViewController {
 
 class DMSecondViewController: UIViewController {
 	
+	@IBOutlet var theProofLabel: UILabel!
+	
 	@IBAction func didPressTop(_ sender: Any) {
 		print(type(of: self), #function)
+		
+		var s = "\n"
+		for i in 1...5 {
+			s += "\nAdded Line \(i)"
+		}
+		if let t = theProofLabel.text {
+			theProofLabel.text = t + s
+		}
+		
 	}
 	@IBAction func didPressMiddle(_ sender: Any) {
 		print(type(of: self), #function)
