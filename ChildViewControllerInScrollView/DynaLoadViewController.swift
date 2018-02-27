@@ -52,12 +52,33 @@ class DynaLoadViewController: UIViewController {
 			new.didMove(toParentViewController: self)
 			justOneContainer.addSubview(new.view)
 			
-			new.view.translatesAutoresizingMaskIntoConstraints = false
+/*
+			Note: the "root" view loaded by instantiateViewController uses an AutoresizingMask created / defined by IB
 			
-			new.view.topAnchor.constraint(equalTo: justOneContainer.topAnchor, constant: 0.0).isActive = true
-			new.view.bottomAnchor.constraint(equalTo: justOneContainer.bottomAnchor, constant: 0.0).isActive = true
-			new.view.leadingAnchor.constraint(equalTo: justOneContainer.leadingAnchor, constant: 0.0).isActive = true
-			new.view.trailingAnchor.constraint(equalTo: justOneContainer.trailingAnchor, constant: 0.0).isActive = true
+			You can either set its frame with:
+			
+				new.view.frame = justOneContainer.bounds
+			
+			or, you can set new.view.translatesAutoresizingMaskIntoConstraints to false, and add constraints:
+
+				new.view.translatesAutoresizingMaskIntoConstraints = false
+			
+				new.view.topAnchor.constraint(equalTo: justOneContainer.topAnchor, constant: 0.0).isActive = true
+				new.view.bottomAnchor.constraint(equalTo: justOneContainer.bottomAnchor, constant: 0.0).isActive = true
+				new.view.leadingAnchor.constraint(equalTo: justOneContainer.leadingAnchor, constant: 0.0).isActive = true
+				new.view.trailingAnchor.constraint(equalTo: justOneContainer.trailingAnchor, constant: 0.0).isActive = true
+
+			I don't believe there is an inherent benefit to one or the other
+*/
+			
+			new.view.frame = justOneContainer.bounds
+			
+//			new.view.translatesAutoresizingMaskIntoConstraints = false
+//
+//			new.view.topAnchor.constraint(equalTo: justOneContainer.topAnchor, constant: 0.0).isActive = true
+//			new.view.bottomAnchor.constraint(equalTo: justOneContainer.bottomAnchor, constant: 0.0).isActive = true
+//			new.view.leadingAnchor.constraint(equalTo: justOneContainer.leadingAnchor, constant: 0.0).isActive = true
+//			new.view.trailingAnchor.constraint(equalTo: justOneContainer.trailingAnchor, constant: 0.0).isActive = true
 			
 			currentSubVC = new
 		
